@@ -1,0 +1,27 @@
+  100  screen -r "`whoami`_part2"; history 1 > ${USER}_part.log
+  150  08.07.2025 23:31:32  export HISTTIMEFORMAT="%d.%m.%Y %H:%M:%S  "; history 1 >> eltex-pg1-v20_part.log 
+  151  08.07.2025 23:31:55  source ~/.bashrc; history 1 >> eltex-pg1-v20_part.log
+  152  08.07.2025 23:32:26  history 1 >> eltex-pg1-v20_part.log
+  154  08.07.2025 23:39:53  date; history 1 >> eltex-pg1-v20_part.log
+  155  08.07.2025 23:40:27  cat $HISTFILE; history 1 >> eltex-pg1-v20_part.log
+  157  08.07.2025 23:42:32  PROMPT_COMMAND="history -a"; history 1 >> eltex-pg1-v20_part.log 
+  158  08.07.2025 23:43:16  echo $PROMPT_COMMAND; history 1 >> eltex-pg1-v20_part.log 
+  159  08.07.2025 23:43:36  date; history 1 >> eltex-pg1-v20_part.log
+  160  08.07.2025 23:44:02  cat $HISTFILE; history 1 >> eltex-pg1-v20_part.log
+  162  08.07.2025 23:51:50  DATE="date"; history 1 >> eltex-pg1-v20_part.log 
+  163  08.07.2025 23:52:14  echo $DATE; history 1 >> eltex-pg1-v20_part.log
+  164  08.07.2025 23:53:01  DATE="`date`"; history 1 >> eltex-pg1-v20_part.log 
+  165  08.07.2025 23:53:04  echo $DATE; history 1 >> eltex-pg1-v20_part.log
+  166  08.07.2025 23:53:38  TIME="`time`"; history 1 >> eltex-pg1-v20_part.log 
+  171  08.07.2025 23:55:58  TIME="`date +"%T"`"; history 1 >> eltex-pg1-v20_part.log 
+  172  08.07.2025 23:56:31  echo $TIME; history 1 >> eltex-pg1-v20_part.log
+  173  08.07.2025 23:57:48  DATE_TIME="`date +"%F %T"`"; history 1 >> eltex-pg1-v20_part.log 
+  174  08.07.2025 23:58:05  echo $DATE_TIME; history 1 >> eltex-pg1-v20_part.log
+  185  09.07.2025 00:03:52  ls /bin /sbin | grep '[0-9]'; history 1 >> eltex-pg1-v20_part.log 
+  190  09.07.2025 00:11:58  export PS1='[\u@\h \@]\$ '; history 1 >> eltex-pg1-v20_part.log 
+  214  export PS1='\u@\h-$(date +%H:%M)> '; history 1 >> eltex-pg1-v20_part.log 
+  217  echo "export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]-\[\033[01;34m\]\$(date +%H:%M)\[\033[00m\]> '" >> ~/.bashrc ; history 1 >> eltex-pg1-v20_part.log 
+  218  source ~/.bashrc; history 1 >> eltex-pg1-v20_part.log
+  221  for month in {01..12}; do mkdir -p ~/$(date +%Y)-$month; done; history 1 >> eltex-pg1-v20_part.log 
+  227  cat $HISTSIZE; history 1 >> eltex-pg1-v20_part.log 
+  230  cat |ls -a .*; history 1 >> eltex-pg1-v20_part.log 

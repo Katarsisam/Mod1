@@ -1,0 +1,35 @@
+  385  history 1 >> practice2_eltex-pg1-v20_part3.log && git config --global user.name Katarsisam 
+  386  history 1 >> practice2_eltex-pg1-v20_part3.log && git config --global user.email krakik20032014@gmail.com 
+  387  history 1 >> practice2_eltex-pg1-v20_part3.log && git config --global init.defaultBranch main
+  388  history 1 >> practice2_eltex-pg1-v20_part3.log && apt update && apt install git gh
+  406  history 1 >> practice2_eltex-pg1-v20_part3.log && ssh-keygen -t ed25519 -f ~/.ssh/Katarsisam >> practice2_eltex-pg1-v20_part3.log 
+Generating public/private ed25519 key pair.
+Your identification has been saved in /root/.ssh/Katarsisam
+Your public key has been saved in /root/.ssh/Katarsisam.pub
+The key fingerprint is:
+SHA256:zgyeI8YMbNfVtjSfuzAKYIXlj8dWDPNy/+uXEY0tbOk root@eltex-practice2-pg1-v20
+The key's randomart image is:
++--[ED25519 256]--+
+|      . o        |
+|     +   *       |
+|    . o o X  . +.|
+| .   o = * = .*.o|
+|  + + + S . +o ..|
+| . * o O     oE. |
+|    = = + o . . o|
+|   . . o . o . o.|
+|        .   ..o. |
++----[SHA256]-----+
+  414  history 1 >> practice2_eltex-pg1-v20_part3.log && gh auth login >> practice2_eltex-pg1-v20_part3.log 
+  415  history 1 >> practice2_eltex-pg1-v20_part3.log && gh auth setup-git --hostname github.com >> practice2_eltex-pg1-v20_part3.log 
+  416  history 1 >> practice2_eltex-pg1-v20_part3.log && gh auth status --hostname github.com >> practice2_eltex-pg1-v20_part3.log 
+github.com
+  ✓ Logged in to github.com account Katarsisam (/root/.config/gh/hosts.yml)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: gho_************************************
+  - Token scopes: 'gist', 'read:org', 'repo'
+https://github.com/Katarsisam/Mod1
+  435  history 1 >> ../practice2_eltex-pg1-v20_part3.log && git status >> ../practice2_eltex-pg1-v20_part3.log 
+On branch main
+nothing to commit, working tree clean

@@ -1,0 +1,13 @@
+mkdir -p ~/D1/D2/D3
+touch D1/D2/file.txt
+echo HELLO >> D1/D2/file.txt
+ln D1/D2/file.txt D1/D2/D3/hlink.txt && ln -s D1/D2/file.txt D1/D2/D3/symlink.txt
+mv D1/D2/file.txt D1
+cat D1/D2/D3/hlink.txt && cat D1/D2/D3/symlink.txt
+rm -rf /D1/D2
+rm -rf /D1/D2
+echo du -ah | awk ' ~ /[0-9]+M/ && +0 > 20' > eltex-pg1-v20_part3_gt50M.log
+find ~ -type f -mtime -1
+which find
+file /usr/bin/find
+file /boot/initrd.img*

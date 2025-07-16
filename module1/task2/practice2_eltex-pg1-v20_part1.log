@@ -1,0 +1,62 @@
+ssh-keygen
+ssh-copy-id -i ~/.ssh/*.pub root@172.16.9.194
+cat ~/.ssh/*.pub | ls -l ~/.ssh/*.pub
+ssh root@172.16.9.194
+cat ~/.ssh/authorized_keys | ls -l ~/.ssh/authorized_keys 
+   11  sudo groupadd user; history 1 >> practice2_eltex-pg1-v20_part1.log 
+   15  sudo useradd -g user1 -s /bin/bash user1 ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+   28  adduser user2; adduser user3 && history 1 >> practice2_eltex-pg1-v20_part1.log 
+   35  usermod -s /usr/sbin/nologin user3 && history 1 >> practice2_eltex-pg1-v20_part1.log 
+   16  usermod -aG user_x user1; usermod -aG user_x user2; usermod -aG user_x user3 && history 1 >> practice2_eltex-pg1-v20_part1.log 
+   18  getent group user_x && history 1 >> practice2_eltex-pg1-v20_part1.log
+   25  chown .user_x /opt/share && history 1 >> practice2_eltex-pg1-v20_part1.log 
+   30  chmod g+s+rwx /opt/share/ && history 1 >> practice2_eltex-pg1-v20_part1.log 
+    6  su -s /bin/bash user3 && history 1 >> practice2_eltex-pg1-v20_part1.log 
+
+  142  nano /home/user1/.profile; history 1 >> practice2_eltex-pg1-v20_part1.log
+touch /opt/share/test1.txt 
+su user2
+touch /opt/share/test2.txt && rm -f /opt/share/test1.txt
+ls /opt/share
+su -
+su -s /bin/bash user3
+touch /opt/share/test3.txt && rm -f /opt/share/test2.txt
+ls /opt/share
+su user1
+touch /opt/share/test1 && rm -f /opt/share/test3.txt
+ 
+  126  chmod 1755 /opt/share && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  127  stat -c "%a" /opt/share && history 1 >> practice2_eltex-pg1-v20_part1.log 
+su user1
+touch /opt/share/test1.txt
+su user 2
+rm -f /opt/share/test1.txt && touch /opt/share/test2.txt
+su -
+su -s /bin/bash user3
+rm -f /opt/share/test1.txt && touch /opt/share/test3.txt
+
+  125  sudo visudo ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+  124  nano /usr/local/bin/dmesg_wrapper ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+  125  sudo chown user2:user2 /usr/local/bin/dmesg_wrapper ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+  126  sudo chmod 4755 /usr/local/bin/dmesg_wrapper ; history 1 >> practice2_eltex-pg1-v20_part1.log
+  122  sudo chown root:root /usr/local/bin/dmesg_wrapper ; history 1 >> practice2_eltex-pg1-v20_part1.log
+  125  for user in $(getent passwd | awk -F: '$1 ~ /^user/ {print $1}'); do     sudo chage -M 10 "$user";     echo "Настроен срок пароля 10 дней для $user"; done ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+  131  nano /etc/motd ; history 1 >> practice2_eltex-pg1-v20_part1.log 
+  136  sudo rsync -a --progress /etc/ /root/etc_backup/ && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  199  tar -czf archive.tar.gz /root/etc_backup && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  213  ls -lh archive.* && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  215  ls -lh archive.* && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  234  echo $(date) >> /etc/motd && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  236  rsync -av --delete /etc/ /root/etc_backup/ && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  242  gunzip archive.tar.gz && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  243  tar -rf archive.tar -C /etc motd && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  244  gzip archive.tar && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  248  tar -tvjf archive.tar.bz2 | sort -k6 > archive_contents.txt && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  249  ls -lR /root/etc_backup | awk '{print $1, $3, $4, $5, $6, $7, $8, $9}' | sort -k8 > dir_contents.txt && history 1 >> practice2_eltex-pg1-v20_part1.log 
+mkdir etc_backup_gzip
+tar -xfz archive.tar.gz -C etc_backup_gzip
+
+  255  mkdir etc_backup_7zip && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  256  7z x archive.7z etc_backup_7zip && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  258  7z x archive.7z -o/etc_backup_7zip && history 1 >> practice2_eltex-pg1-v20_part1.log 
+  263  7z x archive.7z -o/root/etc_backup_7zip && history 1 >> practice2_eltex-pg1-v20_part1.log 
